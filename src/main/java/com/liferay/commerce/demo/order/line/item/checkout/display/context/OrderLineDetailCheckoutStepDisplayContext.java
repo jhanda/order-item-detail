@@ -1,5 +1,6 @@
 package com.liferay.commerce.demo.order.line.item.checkout.display.context;
 
+import com.liferay.account.model.AccountEntry;
 import com.liferay.commerce.account.model.CommerceAccount;
 import com.liferay.commerce.constants.CommerceCheckoutWebKeys;
 import com.liferay.commerce.constants.CommerceWebKeys;
@@ -49,7 +50,7 @@ public class OrderLineDetailCheckoutStepDisplayContext {
 
     public List<CommerceAddress> getCommerceAddresses() throws PortalException {
         return _commerceAddressLocalService.getShippingCommerceAddresses(
-                _commerceOrder.getCompanyId(), CommerceAccount.class.getName(),
+                _commerceOrder.getCompanyId(), AccountEntry.class.getName(),
                 _commerceOrder.getCommerceAccountId());
     }
 
