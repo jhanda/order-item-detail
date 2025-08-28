@@ -13,6 +13,7 @@
 <%@ page import="com.liferay.commerce.model.CommerceOrderItem" %>
 <%@ page import="com.liferay.commerce.product.model.CPDefinition" %>
 <%@ page import="java.util.List" %>
+<%@ page import="java.math.BigDecimal" %>
 <%@ page import="com.liferay.commerce.model.CommerceAddress" %>
 <%@ page import="java.util.Calendar" %>
 <%@ page import="com.liferay.portal.kernel.util.*" %>
@@ -95,7 +96,7 @@
 
 				<aui:input label=""
 						   name="<%= quantityFormFieldName %>"
-						   value="<%= Integer.toString(commerceOrderItem.getQuantity()) %>"  />
+						   value="<%= (commerceOrderItem.getQuantity().toString()) %>"  />
 			</liferay-ui:search-container-column-text>
 
 			<liferay-ui:search-container-column-text

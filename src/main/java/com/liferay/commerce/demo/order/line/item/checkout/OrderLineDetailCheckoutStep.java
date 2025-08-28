@@ -24,6 +24,7 @@ import javax.portlet.ActionResponse;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.math.BigDecimal;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -80,7 +81,8 @@ public class OrderLineDetailCheckoutStep extends BaseCommerceCheckoutStep {
 			DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
 			Date requestedDeliveryDate = ParamUtil.getDate(actionRequest, Long.toString(commerceOrderItem.getCommerceOrderItemId()) + "-date", df);
 
-			commerceOrderItem.setQuantity(quantity);
+			commerceOrderItem.setQuantity(BigDecimal.valueOf(quantity));
+
 			if (commerceOrder.getShippingAddressId() != shipToAddressId){
 				commerceOrderItem.setShippingAddressId(shipToAddressId);
 			}

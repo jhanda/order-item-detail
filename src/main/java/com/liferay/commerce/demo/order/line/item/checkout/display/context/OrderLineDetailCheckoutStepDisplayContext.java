@@ -1,7 +1,6 @@
 package com.liferay.commerce.demo.order.line.item.checkout.display.context;
 
 import com.liferay.account.model.AccountEntry;
-import com.liferay.commerce.account.model.CommerceAccount;
 import com.liferay.commerce.constants.CommerceCheckoutWebKeys;
 import com.liferay.commerce.constants.CommerceWebKeys;
 import com.liferay.commerce.context.CommerceContext;
